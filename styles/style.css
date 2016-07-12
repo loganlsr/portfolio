@@ -1,65 +1,137 @@
+html, p {
+  background-color: black;
+}
+
 * {
-  background-color: #242623;
+  background-color: rgba(120, 120, 120, 1);
   color: #fff;
 }
 
-header {
-  position: relative;
-  width: 100%;
+body {
+  background-color: rgba(120, 120, 120, 1);
 }
 
-.site_title {
+ul, ul li, ul img, .small, .dropdown-menu {
+  background-color: rgba(120, 120, 120, 1);
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+  width: 100%;
+  padding-top: 10px;
+}
+
+h1, h2 {
   font-family: 'Galada', cursive;
   color: #217500;
   font-size: 3em;
-  margin-top: 1%;
-  padding-left: 1%;
 }
 
 .icon-menu {
   font-size: 1.5em;
-  float: right;
+}
+
+.menu {
+  display: block;
+}
+
+.dropdown {
+  float: left;
+}
+
+.dropdown-menu {
+  width: 15%;
+}
+
+ul {
+  padding-bottom: 70px;
+  display: none;
+}
+
+ul:hover {
+  display: inline-block;
 }
 
 ul li {
-  display: inline;
-  float: right;
+  float: left;
+  padding-right: 10px;
+}
+
+.pad {
+  padding-left: 5px;
+}
+
+.pad img {
+  width: 57px;
+  height: 57px;
 }
 
 img {
   display: inline;
-  float: right;
   height: 50px;
-  width: 50px;
-  padding-left: 8px;
 }
 
 .small {
   height: 57px;
   width: 57px;
-  padding-left: 2px;
 }
 
 main {
   clear: both;
+  background-color: black;
   font-family: 'Heebo-Regular', sans-serif;
-  width: 1000px;
   margin: 0 auto;
   font-size: 2em;
   padding-top: 30px;
+}
 
+a:hover {
+  background-color: #fff;
+  border: solid, 2px;
+  border-radius: 90px;
+}
+
+a img {
+  border-radius: 90px;
+}
+
+button {
+  border: none;
+  clear: both;
 }
 
 @media screen and (min-width: 940px) {
-  .icon-menu {
+  button {
     display: none;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    font-size: 1.5em;
+    display: inline;
+    width: auto;
+  }
+
+  .dropdown {
+    display: inline-block;
   }
 
   header {
     position: relative;
   }
 
-  .main-nav ul {
+  ul {
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .main-nav {
     display: inline-block;
     position: absolute;
     top: 20px;
@@ -71,4 +143,32 @@ main {
   .main-nav ul li {
     display: inline-block;
   }
+
+  ul, ul li, ul img, .small, .dropdown-menu {
+    background-color: rgba(120, 120, 120, 1);
+  }
+
+  h1, h2 {
+    font-family: 'Galada', cursive;
+    color: #217500;
+    font-size: 5em;
+  }
+
+  a:hover {
+    background-color: #fff;
+    border: solid, 2px;
+    border-radius: 90px;
+  }
+
+  a img {
+    border-radius: 90px;
+  }
+  /*ul li {
+    float: left;
+    background-color: rgba(120, 120, 120, 1);
+  }
+
+  ul img {
+    background-color: rgba(120, 120, 120, 1);
+  }*/
 }
