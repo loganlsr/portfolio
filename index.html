@@ -3,23 +3,32 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
     <header>
-      <section class="site_title">
-        <h1 >Logan Rogers - Portfolio</h1>
-      </section>
-      <section>
+      <div class="header" >
+        <div>
+          <h1 class="site_title">Logan Rogers</h1>
+          <h2>Portfolio</h2>
+        </div>
+      </div>
+      <div class="header">
         <nav class="main_nav">
-          <div class="icon-menu"></div>
-          <ul>
-            <li><a href="https://twitter.com/LoganRogerss"><img class="small" src="img/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/Loser818"><img class="small" src="img/facebook.png" /></a></li>
-            <li><a href="https://github.com/loganlsr"><img src="img/github.png" /></a></li>
-            <li><a href="http://www.animearcade.net/"><img src="img/link.png" /></a></li>
-          </ul>
+          <div class="dropdown">
+            <button type="button" data-toggle="dropdown"><img class="menu" src="img/menu.png" /></button>
+            <ul class="dropdown-menu">
+              <li><a href="https://twitter.com/LoganRogerss"><img class="small" src="img/twitter.png" /></a></li>
+              <li><a href="https://www.facebook.com/Loser818"><img class="small" src="img/facebook.png" /></a></li>
+              <li class="pad"><a href="https://github.com/loganlsr"><img src="img/github.png" /></a></li>
+              <li class="pad"><a href="http://www.animearcade.net/"><img src="img/link.png" /></a></li>
+            </ul>
+
         </nav>
+      </div>
       </section>
     </header>
     <main>
