@@ -3,7 +3,6 @@ html, p {
 }
 
 * {
-  background-color: rgba(120, 120, 120, 1);
   color: #fff;
 }
 
@@ -42,10 +41,12 @@ h1, h2 {
 
 .dropdown {
   float: left;
+  background-color: rgba(120, 120, 120, 1);
 }
 
 .dropdown-menu {
   width: 15%;
+  background-color: rgba(120, 120, 120, 1);
 }
 
 ul {
@@ -103,6 +104,15 @@ a img {
 button {
   border: none;
   clear: both;
+  background-color: rgba(120, 120, 120, 1);
+}
+
+.template {
+  display: none;
+}
+
+.project {
+  background-color: black;
 }
 
 @media screen and (min-width: 940px) {
@@ -163,12 +173,12 @@ button {
   a img {
     border-radius: 90px;
   }
-  /*ul li {
-    float: left;
-    background-color: rgba(120, 120, 120, 1);
+
+  .template {
+    display: none;
   }
 
-  ul img {
-    background-color: rgba(120, 120, 120, 1);
-  }*/
+  section .article-body {
+    text-align: center;
+  }
 }
