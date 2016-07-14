@@ -9,12 +9,10 @@ function Project(opts) {
   this.projectUrl = opts.projectUrl;
   this.publishedOn = opts.publishedOn;
   this.body = opts.body;
-  console.log('successfully calling construtor');
 }
 
 Project.prototype.toHtml = function(){
   var $newProject = $('project.template').clone();
-  console.log('just cloned project template');
   $newProject.find('time[pubdate]').attr('title', this.publishedOn);
   $newProject.find('time').html(parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' Days Ago');
   $newProject.find('address').html(this.author);
