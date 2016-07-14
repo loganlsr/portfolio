@@ -91,6 +91,11 @@ main {
   padding-top: 30px;
 }
 
+.body {
+  width: 960px;
+  margin: 0 auto;
+}
+
 a:hover {
   background-color: #fff;
   border: solid, 2px;
@@ -118,6 +123,12 @@ button {
 .tab-content {
   display: none;
 }
+
+section .article-body {
+  width: 960px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 940px) {
   button {
     display: none;
@@ -184,4 +195,15 @@ button {
   section .article-body {
     text-align: center;
   }
+
+  .tab-content {
+    display: none;
+  }
+
+  section .article-body {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+
 }
