@@ -115,6 +115,9 @@ button {
   background-color: black;
 }
 
+.tab-content {
+  display: none;
+}
 @media screen and (min-width: 940px) {
   button {
     display: none;
