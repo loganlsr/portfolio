@@ -18,7 +18,7 @@ Project.prototype.toHtml = function(){
   $newProject.find('address').html(this.author);
   $newProject.find('address a').attr('href', this.projectUrl);
   $newProject.find('h1').html(this.title);
-  $newProject.find('h1').append('<h6>' + this.category + '</h6>');
+  $newProject.find('h1').append('<h5>' + this.category + '</h5>');
   $newProject.find('section.article-body').html(this.body);
   $newProject.removeClass('template');
   return $newProject;
