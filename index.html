@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <header>
+    <header class="top_header">
       <div class="header" >
         <div>
           <h1 class="site_title">Logan Rogers</h1>
@@ -19,8 +19,10 @@
           <div class="dropdown">
             <button type="button" data-toggle="dropdown"><img class="menu" src="img/menu.png" /></button>
             <ul class="dropdown-menu">
-              <li><a href="https://twitter.com/LoganRogerss"><img class="small" src="img/twitter.png" /></a></li>
-              <li><a href="https://www.facebook.com/Loser818"><img class="small" src="img/facebook.png" /></a></li>
+              <li class="pad"><a href=""><img src="img/home.png" /><a></li>
+              <li class="pad"><a href=""><img src="img/about.png" /><a></li>
+              <li class="pad"><a href="https://twitter.com/LoganRogerss"><img class="small" src="img/twitter.png" /></a></li>
+              <li class="pad"><a href="https://www.facebook.com/Loser818"><img class="small" src="img/facebook.png" /></a></li>
               <li class="pad"><a href="https://github.com/loganlsr"><img src="img/github.png" /></a></li>
               <li class="pad"><a href="http://www.animearcade.net/"><img src="img/link.png" /></a></li>
             </ul>
@@ -33,7 +35,7 @@
         <div class="portfolio">
           <section id="projects">
             <project class="template" data-category="cat">
-              <header>
+              <header class="project_header">
                 <h1>Title</h1>
                 <div class="byline">
                   By <address><a href="">Author Name</a></address>
@@ -68,5 +70,6 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script rel="text/js" src="JS/projectObjects.js"></script>
     <script rel="text/js" src="JS/app.js"></script>
+    <script rel="text/js" src="JS/portfolioView.js"></script>
   </body>
 </html>
