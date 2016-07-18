@@ -1,6 +1,12 @@
 'use strict';
 var portfolioView = {};
 
+portfolioView.handleNav = function() {
+  $('#top_header button').on('click', function() {
+    $('.dropdown-menu').toggle();
+  });
+};
+
 portfolioView.setTeasers = function() {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('.read-on').on('click', function(event) {
@@ -16,4 +22,5 @@ portfolioView.setTeasers = function() {
   });
 };
 
+portfolioView.handleNav();
 portfolioView.setTeasers();
