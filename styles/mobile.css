@@ -1,8 +1,4 @@
-header {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
+
 
 .top_header {
   border-bottom: solid 5px #217500;
@@ -19,11 +15,7 @@ header {
   padding-top: 10px;
 }
 
-h1, h2 {
-  font-family: 'Galada', cursive;
-  color: #217500;
-  font-size: 3em;
-}
+
 
 .icon-menu {
   font-size: 1.5em;
@@ -37,19 +29,6 @@ h1, h2 {
   width: 15%;
 }
 
-ul {
-  padding-bottom: 70px;
-  display: flex;
-}
-
-ul:hover {
-  display: inline-block;
-}
-
-ul li {
-  float: left;
-  padding-right: 10px;
-}
 
 .pad {
   padding: 5px;
@@ -60,24 +39,14 @@ ul li {
   height: 57px;
 }
 
-img {
-  display: inline;
-  height: 50px;
-}
+
 
 .small {
   height: 57px;
   width: 57px;
 }
 
-main {
-  clear: both;
-  background-color: black;
-  font-family: 'Heebo-Regular', sans-serif;
-  margin: 0 auto;
-  font-size: 2em;
-  padding-top: 30px;
-}
+
 
 .body {
   width: 100%;
@@ -93,15 +62,7 @@ a:hover {
   text-decoration: none;
 }
 
-a img {
-  border-radius: 90px;
-}
 
-button {
-  border: none;
-  clear: both;
-  background-color: #fff;
-}
 
 .template {
   display: none;
@@ -115,40 +76,3 @@ button {
   display: none;
 }
 
-section .article-body {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-html {font-size: 1em;}
-
-body {
-  background-color: white;
-  font-family: 'Libre Baskerville', serif;
-  font-weight: 400;
-  line-height: 1.45;
-  color: #333;
-}
-
-p {margin-bottom: 1.3em;}
-
-h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 3.157em;
-}
-
-h2 {font-size: 2.369em;}
-
-h3 {font-size: 1.777em;}
-
-h4 {font-size: 1.333em;}
-
-small, .font_small {font-size: 0.75em;}
