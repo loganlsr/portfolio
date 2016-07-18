@@ -1,0 +1,90 @@
+/* Layout styles can also be divided into major and minor styles based on reuse. Major layout styles such as header and footer are traditionally styled using ID selectors but take the time to think about the elements that are common across all components of the page and use class selectors where appropriate. 
+
+Generally, a Layout style only has a single selector: a single ID or class name. */
+
+
+#top_header {
+  border-bottom: solid 5px #217500;
+  background-color: #fff;
+}
+
+.section-header {
+  border-top: solid 5px #217500;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.main-header {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  font-size: 1.5em;
+}
+
+.menu {
+  display: block;
+}
+
+.dropdown-menu {
+  width: 15%;
+}
+
+.pad {
+  padding: 5px;
+}
+
+.pad img {
+  width: 57px;
+  height: 57px;
+}
+
+.small {
+  height: 57px;
+  width: 57px;
+}
+
+.content-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.template {
+  display: none;
+}
+
+.project {
+  background-color: black;
+}
+
+.tab-content {
+  display: none;
+}
+
+section .article-body {
+  text-align: center;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 700px) {
+
+  .main-nav {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    padding: 0;
+    list-style: none;
+    clear: both;
+  }
+
+  .main-nav ul li {
+    display: inline-block;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+}

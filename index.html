@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Galada|Heebo|Libre+Baskerville" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/mobile.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
   </head>
   <body>
-    <header class="top_header">
+    <header id="top_header">
       <div class="main-header" >
-        <div>
-          <h1 class="site_title">Logan Rogers</h1>
-          <h2>Portfolio</h2>
-        </div>
+        <h1>Logan Rogers</h1>
+        <h2>Portfolio</h2>
       </div>
       <div class="main-header">
         <nav class="main_nav">
@@ -33,12 +31,13 @@
       </div>
     </header>
     <main>
-      <div class="body">
-        <div class="portfolio">
+      <div id="content-container">
+        <div id="portfolio">
           <section id="projects">
             <project class="template" data-category="cat">
               <header class="section_header">
                 <h1>Title</h1>
+                <h3>Category</h3>
                 <div class="byline">
                   By <address><a href="">Author Name</a></address>
                   Published <time pubdate datetime="2000-01-01">Publish Time</time>
@@ -69,7 +68,6 @@
     <footer>
     </footer>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script rel="text/js" src="JS/projectObjects.js"></script>
     <script rel="text/js" src="JS/app.js"></script>
     <script rel="text/js" src="JS/portfolioView.js"></script>

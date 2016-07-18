@@ -1,0 +1,74 @@
+/* As briefly mentioned in the previous section, a Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
+
+When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. */
+
+.main-header h2, header h3 {
+  margin: 0;
+}
+
+.section_header h1 {
+  margin-bottom: 0;
+}
+
+.main_nav {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  float: left;
+  display: none;
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  min-width: 5.5em;
+  padding: 0;
+  font-size: 100%;
+  z-index: 50;
+  background: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dropdown-menu :hover {
+  display: inline-block;
+}
+
+.dropdown-menu li {
+  float: left;
+}
+
+section .article-body a {
+  text-align: center;
+}
+
+a .read-on {
+  margin-left: .3em;
+}
+
+@media screen and (min-width: 700px) {
+
+  #main_header button {
+    display: none;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    display: flex;
+    width: auto;
+    padding-bottom: 0;
+    justify-content: space-around;
+    flex-direction: row;
+    top: 0;
+  }
+
+  .dropdown-menu li a {
+    padding: 0;
+  }
+
+  .dropdown {
+    display: inline-block;
+  }

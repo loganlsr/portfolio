@@ -1,0 +1,104 @@
+/* A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+
+Base styles include setting heading sizes, default link styles, default font styles, and body backgrounds. There should be no need to use !important in a Base style. */
+
+html {font-size: 1em;}
+
+body {
+  background-color: #000;
+  font-family: 'Heebo-Regular', sans-serif;
+  line-height: 1.45;
+  color: #fff;
+}
+
+p {
+  margin: 0 .3em 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-family: 'Galada',  cursive;;
+  font-weight: inherit;
+  line-height: 1.2;
+  color: #217500;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+img {
+  display: inline;
+  height: 50px;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+  clear: both;
+  background-color: black;
+  padding-top: 30px;
+}
+
+a img {
+  border-radius: 90px;
+}
+
+a:link {
+  color: #cc6e33;
+  border-radius: 90px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #cc6e33;
+}
+
+a:hover {
+  /*background-color: #fff;*/
+  border: solid, 2px;
+}
+
+button {
+  border: none;
+  clear: both;
+  background-color: #fff;
+}
+
+section .article-body {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 700px) {
+
+  button {
+    display: none;
+  }
+
+  header {
+    position: relative;
+  }
+
+  ul {
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
