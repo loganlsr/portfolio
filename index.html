@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <script id="blog-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            {{publishStatus}}
+            </div>
+          </header>
+          <section class="article-body">{{{body}}}</section>
+          <a href="" class="read-on"> Read on &rarr;</a>
+        </article>
+      </script>
   </head>
   <body>
     <header id="top_header">
@@ -68,6 +81,8 @@
     <footer>
     </footer>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script rel="text/js" src="JS/projectObjects.js"></script>
     <script rel="text/js" src="JS/app.js"></script>
     <script rel="text/js" src="JS/portfolioView.js"></script>
