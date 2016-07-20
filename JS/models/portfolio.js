@@ -35,3 +35,11 @@ projectData.forEach(function(ele){
 projects.forEach(function(a){
   $('#projects').append(a.toHtml());
 });
+
+Project.loadAll = function(dataWePassIn) {
+  Article.allArticles = dataWePassIn.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  }).map(function(ele) {
+    return new Article(ele);
+  });
+};

@@ -1,4 +1,5 @@
 'use strict';
+
 var portfolioView = {};
 
 portfolioView.handleNav = function() {
