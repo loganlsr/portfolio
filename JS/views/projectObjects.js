@@ -23,6 +23,6 @@ var projectData = [
     author:       'Logan Rogers',
     projectUrl:   'http://loganlsr.github.io/about_me/',
     publishedOn:  '2016-06-21',
-    body:         '<a href="http://loganlsr.github.io/about_me/">Click here to check it out!</a><p>My first project in the 201 level class at Code Fellows.</p><p>We were tasked with making a simply designed "about me" page that told the viewer about me. We also integrated the use of prompts and alerts and built them in a way to be used as a quiz.</p>'
+    body:         '<a href="http://loganlsr.github.io/about_me/">Click here to check it out!</a><p>My first project in the 201 level class at Code Fellows.</p><p>We were tasked with making a simply designed "about me" page that told the viewer about who I am. We also integrated the use of prompts and alerts and built them in a way to be used as a quiz.</p>'
   }
 ];

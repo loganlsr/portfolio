@@ -12,16 +12,11 @@ function Project(opts) {
 }
 
 Project.prototype.toHtml = function(){
-  var $newProject = $('project.template').clone();
-  $newProject.find('time[pubdate]').attr('title', this.publishedOn);
-  $newProject.find('time').html(parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' Days Ago');
-  $newProject.find('address').html(this.author);
-  $newProject.find('address a').attr('href', this.projectUrl);
-  $newProject.find('h1').html(this.title);
-  $newProject.find('h3').text(this.category);
-  $newProject.find('section.article-body').html(this.body);
-  $newProject.removeClass('template');
-  return $newProject;
+  var source = $('#blog-template').html();
+  var template = Handlebars.compile(source);
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' Days Ago';
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  return template(this);
 };
 
 projectData.sort(function(a, b){
@@ -36,10 +31,9 @@ projects.forEach(function(a){
   $('#projects').append(a.toHtml());
 });
 
-Project.loadAll = function(dataWePassIn) {
-  Article.allArticles = dataWePassIn.sort(function(a,b) {
-    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-  }).map(function(ele) {
-    return new Article(ele);
-  });
-};
+// Project.loadAll = function(dataWePassIn) {
+//   Article.allArticles = dataWePassIn.sort(function(a,b) {
+//     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+//   }).map(function(ele) {
+//     return new Article(ele);
+// });
