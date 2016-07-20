@@ -101,4 +101,9 @@ section .article-body {
     text-align: center;
     padding-bottom: 10px;
   }
+
+  main {
+    width: 600px;
+    margin: 0 auto;
+  }
 }
