@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    <script id="blog-template" type="text/x-handlebars-template">
+    <script id="projects-template" type="text/x-handlebars-template">
       <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
         <header>
           <h1>{{title}}</h1>
@@ -33,7 +33,7 @@
           <div class="dropdown">
             <button type="button" data-toggle="dropdown"><img class="menu" src="img/menu.png" /></button>
             <ul class="dropdown-menu">
-              <li class="pad"><a href="#"><img src="img/home.png" /></a></li>
+              <li class="pad"><a href="index.html"><img src="img/home.png" /></a></li>
               <li class="pad"><a href="#"><img src="img/about.png" /></a></li>
               <li class="pad"><a href="https://twitter.com/LoganRogerss"><img class="small" src="img/twitter.png" /></a></li>
               <li class="pad"><a href="https://www.facebook.com/Loser818"><img class="small" src="img/facebook.png" /></a></li>
@@ -44,6 +44,22 @@
       </div>
     </header>
     <main>
+      <section id="articles" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="author-filter">
+                <option value="">-- Filter by Authors --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </section>
       <div id="content-container">
         <div id="portfolio">
           <section id="projects">

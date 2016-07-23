@@ -1,8 +1,8 @@
+'use strict';
+(function(module) {
 
-(function(module){
-
-  function Projects (opts) {
-    for (key in opts) {
+  function Project (opts) {
+    for(var key in opts) {
       this[key] = opts[key];
     }
   }
@@ -13,7 +13,7 @@
     var template = Handlebars.compile($(scriptTemplateId).text());
     this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
     this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-    this.body = marked(this.body);
+    // this.body = marked(this.body);
     return template(this);
   };
 
@@ -26,17 +26,17 @@
   };
 
   Project.fetchAll = function(nextFunction) {
-    if (localStorage.hackerIpsum) {
+    if (localStorage.projectObjects) {
       $.ajax({
         type: 'HEAD',
-        url: '/data/hackerIpsum.json',
+        url: '/data/projectObjects.json',
         success: function(data, message, xhr) {
           var eTag = xhr.getResponseHeader('eTag');
           if (!localStorage.eTag || eTag !== localStorage.eTag) {
             localStorage.eTag = eTag;
             Project.getAll(nextFunction);
           } else {
-            Project.loadAll(JSON.parse(localStorage.hackerIpsum));
+            Project.loadAll(JSON.parse(localStorage.projectObjects));
             nextFunction();
           }
         }
@@ -47,9 +47,9 @@
   };
 
   Project.getAll = function(nextFunction) {
-    $.getJSON('/data/hackerIpsum.json', function(responseData) {
+    $.getJSON('/data/projectObjects.json', function(responseData) {
       Project.loadAll(responseData);
-      localStorage.hackerIpsum = JSON.stringify(responseData);
+      localStorage.projectObjects = JSON.stringify(responseData);
       nextFunction();
     });
   };

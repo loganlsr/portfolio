@@ -9,4 +9,4 @@ portfolioView.initAdminPage = function() {
   $('#portfolio-stats .articles').text(Project.allProjects.length);
   $('#portfolio-stats .words').text(Project.numWordsAll());
 };
-Project.fetchAll(projectView.initAdminPage);
+Project.fetchAll(portfolioView.initAdminPage);
