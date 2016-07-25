@@ -51,7 +51,6 @@
 
   portfolioView.renderIndexPage = function() {
     Project.allProjects.forEach(function(a) {
-      console.log("stuff is happening");
       if($('#category-filter option:contains("' + a.category + '")').length === 0) {
         $('#category-filter').append(a.toHtml($('#category-filter-template')));
       };
