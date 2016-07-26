@@ -33,8 +33,8 @@
           <div class="dropdown">
             <button type="button" data-toggle="dropdown"><img class="menu" src="img/menu.png" /></button>
             <ul class="dropdown-menu">
-              <li class="pad"><a href="index.html"><img src="img/home.png" /></a></li>
-              <li class="pad"><a href="#"><img src="img/about.png" /></a></li>
+              <li class="pad"><a href="/"><img src="img/home.png" /></a></li>
+              <li class="pad"><a href="/about"><img src="img/about.png" /></a></li>
               <li class="pad"><a href="https://twitter.com/LoganRogerss"><img class="small" src="img/twitter.png" /></a></li>
               <li class="pad"><a href="https://www.facebook.com/Loser818"><img class="small" src="img/facebook.png" /></a></li>
               <li class="pad"><a href="https://github.com/loganlsr"><img src="img/github.png" /></a></li>
@@ -44,62 +44,46 @@
       </div>
     </header>
     <main>
-      <section id="articles" class="tab-content">
-        <div>
-          <ul id="filters">
-            <li>
-              <select id="author-filter">
-                <option value="">-- Filter by Authors --</option>
-              </select>
-            </li>
-            <li>
-              <select id="category-filter">
-                <option value="">-- Filter by Categories --</option>
-              </select>
-            </li>
-          </ul>
-        </div>
+      <div id="portfolio" class="tab-content">
+        <section id="projects">
+          <project class="template" data-category="cat">
+            <header class="section_header">
+              <h1>Title</h1>
+              <h3>Category</h3>
+              <div class="byline">
+                By <address><a href="">Author Name</a></address>
+                Published <time pubdate datetime="2000-01-01">Publish Time</time>
+              </div>
+            </header>
+          <section class="article-body"></section>
+          <a href="#" class="read-on">Read on &rarr;</a>
+        </project>
       </section>
-      <div id="content-container">
-        <div id="portfolio">
-          <section id="projects">
-            <project class="template" data-category="cat">
-              <header class="section_header">
-                <h1>Title</h1>
-                <h3>Category</h3>
-                <div class="byline">
-                  By <address><a href="">Author Name</a></address>
-                  Published <time pubdate datetime="2000-01-01">Publish Time</time>
-                </div>
-              </header>
-            <section class="article-body"></section>
-            <a href="#" class="read-on">Read on &rarr;</a>
-          </project>
+      </div>
+      <div id="about" class="tab-content">
+        <header>
+          Welcome to my Portfolio!
+        </header>
+        <section>
+          <h1>Some of My Intrests:</h1>
+          <ul>
+            <li>Watching anime!</li>
+            <li>Cooking!</li>
+            <li>Playing video games!</li>
+          </ul>
         </section>
-        </div>
-        <div>
-          <section id="about" class="tab-content">
-          <header>
-            Welcome to my Portfolio!
-          </header>
-          <section>
-            <h1>Some of My Intrests:</h1>
-            <ul>
-              <li>Watching anime!</li>
-              <li>Cooking!</li>
-              <li>Playing video games!</li>
-            </ul>
-          </section>
-        </section>
-        </div>
       </div>
     </main>
     <footer>
     </footer>
+    <script src="vendor/page.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script rel="text/js" src="JS/models/portfolio.js"></script>
     <script rel="text/js" src="JS/views/portfolioView.js"></script>
+    <script rel="text/js" src="JS/controllers/portfolioController.js"></script>
+    <script rel="text/js" src="JS/controllers/aboutController.js"></script>
+    <script rel="text/js" src="JS/controllers/routes.js"></script>
   </body>
 </html>
