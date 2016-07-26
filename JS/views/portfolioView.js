@@ -28,12 +28,6 @@
     });
   };
 
-  portfolioView.handleNav = function() {
-    $('#top_header button').on('click', function() {
-      $('.dropdown-menu').toggle();
-    });
-  };
-
   portfolioView.setTeasers = function() {
     $('.article-body *:nth-of-type(n+2)').hide();
     $('.read-on').on('click', function(event) {
@@ -51,7 +45,6 @@
 
   portfolioView.renderIndexPage = function() {
     Project.allProjects.forEach(function(a) {
-      console.log("stuff is happening");
       if($('#category-filter option:contains("' + a.category + '")').length === 0) {
         $('#category-filter').append(a.toHtml($('#category-filter-template')));
       };
@@ -62,7 +55,6 @@
     });
     portfolioView.handleAuthorFilter();
     portfolioView.handleCategoryFilter();
-    portfolioView.handleNav();
     portfolioView.setTeasers();
   };
   module.portfolioView = portfolioView;
