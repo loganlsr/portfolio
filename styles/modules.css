@@ -53,6 +53,20 @@ section article {
   padding-bottom: 40px;
 }
 
+h1 {
+  text-align: center;
+}
+
+section {
+  padding-bottom: 40px;
+}
+
+ul {
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 700px) {
 
   #main_header button {
