@@ -68,3 +68,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# auto-generated tag files
+tags
+githubToken.js
