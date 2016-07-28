@@ -1,4 +1,4 @@
-!function(e){if('object'==typeof exports&&'undefined'!=typeof module)module.exports=e();else if('function'==typeof define&&define.amd)define([],e);else{var f;'undefined'!=typeof window?f=window:'undefined'!=typeof global?f=global:'undefined'!=typeof self&&(f=self),f.page=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=='function'&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error('Cannot find module ''+o+''');throw f.code='MODULE_NOT_FOUND',f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=='function'&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.page=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process){
   /* globals require, module */
 
@@ -369,7 +369,7 @@
   }
 
   /**
-   * Initialize a new 'request' `Context`
+   * Initialize a new "request" `Context`
    * with the given `path` and optional initial `state`.
    *
    * @constructor
@@ -509,7 +509,7 @@
 
 
   /**
-   * Handle 'populate' events.
+   * Handle "populate" events.
    */
 
   var onpopstate = (function () {
@@ -537,7 +537,7 @@
     };
   })();
   /**
-   * Handle 'click' events.
+   * Handle "click" events.
    */
 
   function onclick(e) {
@@ -558,8 +558,8 @@
 
 
     // Ignore if tag has
-    // 1. 'download' attribute
-    // 2. rel='external' attribute
+    // 1. "download" attribute
+    // 2. rel="external" attribute
     if (el.hasAttribute('download') || el.getAttribute('rel') === 'external') return;
 
     // ensure non-hash for the same path
@@ -582,7 +582,7 @@
     // rebuild path
     var path = el.pathname + el.search + (el.hash || '');
 
-    // strip leading '/[drive letter]:' on NW.js on Windows
+    // strip leading "/[drive letter]:" on NW.js on Windows
     if (typeof process !== 'undefined' && path.match(/^\/[a-zA-Z]:\//)) {
       path = path.replace(/^\/[a-zA-Z]:\//, '/');
     }
@@ -624,7 +624,7 @@
   page.sameOrigin = sameOrigin;
 
 }).call(this,require('_process'))
-},{'_process':2,'path-to-regexp':3}],2:[function(require,module,exports){
+},{"_process":2,"path-to-regexp":3}],2:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -645,7 +645,7 @@ process.nextTick = (function () {
     var queue = [];
 
     if (canMutationObserver) {
-        var hiddenDiv = document.createElement('div');
+        var hiddenDiv = document.createElement("div");
         var observer = new MutationObserver(function () {
             var queueList = queue.slice();
             queue.length = 0;
@@ -736,9 +736,9 @@ var PATH_REGEXP = new RegExp([
   // Match Express-style parameters and un-named parameters with a prefix
   // and optional suffixes. Matches appear as:
   //
-  // '/:test(\\d+)?' => ['/', 'test', '\d+', undefined, '?', undefined]
-  // '/route(\\d+)'  => [undefined, undefined, undefined, '\d+', undefined, undefined]
-  // '/*'            => ['/', undefined, undefined, undefined, undefined, '*']
+  // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+  // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+  // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
   '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^()])+)\\))?|\\(((?:\\\\.|[^()])+)\\))([+*?])?|(\\*))'
 ].join('|'), 'g')
 
@@ -853,20 +853,20 @@ function tokensToFunction (tokens) {
         if (token.optional) {
           continue
         } else {
-          throw new TypeError('Expected '' + token.name + '' to be defined')
+          throw new TypeError('Expected "' + token.name + '" to be defined')
         }
       }
 
       if (isarray(value)) {
         if (!token.repeat) {
-          throw new TypeError('Expected '' + token.name + '' to not repeat, but received '' + value + ''')
+          throw new TypeError('Expected "' + token.name + '" to not repeat, but received "' + value + '"')
         }
 
         if (value.length === 0) {
           if (token.optional) {
             continue
           } else {
-            throw new TypeError('Expected '' + token.name + '' to not be empty')
+            throw new TypeError('Expected "' + token.name + '" to not be empty')
           }
         }
 
@@ -874,7 +874,7 @@ function tokensToFunction (tokens) {
           segment = encodeURIComponent(value[j])
 
           if (!matches[i].test(segment)) {
-            throw new TypeError('Expected all '' + token.name + '' to match '' + token.pattern + '', but received '' + segment + ''')
+            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
           }
 
           path += (j === 0 ? token.prefix : token.delimiter) + segment
@@ -886,7 +886,7 @@ function tokensToFunction (tokens) {
       segment = encodeURIComponent(value)
 
       if (!matches[i].test(segment)) {
-        throw new TypeError('Expected '' + token.name + '' to match '' + token.pattern + '', but received '' + segment + ''')
+        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
       }
 
       path += token.prefix + segment
@@ -1055,7 +1055,7 @@ function tokensToRegExp (tokens, options) {
   // In non-strict mode we allow a slash at the end of match. If the path to
   // match already ends with a slash, we remove it for consistency. The slash
   // is valid at the end of a path match, not in the middle. This is important
-  // in non-ending mode, where '/test/' shouldn't match '/test//route'.
+  // in non-ending mode, where "/test/" shouldn't match "/test//route".
   if (!strict) {
     route = (endsWithSlash ? route.slice(0, -2) : route) + '(?:\\/(?=$))?'
   }
@@ -1104,7 +1104,7 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(path, keys, options)
 }
 
-},{'isarray':4}],4:[function(require,module,exports){
+},{"isarray":4}],4:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
